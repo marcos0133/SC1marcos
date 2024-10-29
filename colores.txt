@@ -1,0 +1,4 @@
+rojo:#FF0000
+verde:#00FF00
+azul:#0000FF
+amarillo:#FFFF00
