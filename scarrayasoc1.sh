@@ -1,13 +1,14 @@
 #!/bin/bash
 
-# Verificamos si se pasó un archivo como argumento
-if [ $# -ne 1 ]; then
-    echo "Uso: $0 colores.txt"
+# Verificamos si se pasaron los archivos como argumentos
+if [ $# -ne 2 ]; then
+    echo "Uso: $0 colores.txt imagen.jpg"
     exit 1
 fi
 
-# Archivo de colores
+# Archivo de colores y de imagen
 archivo_colores=$1
+imagen=$2
 
 # Declaramos un array asociativo para los colores
 declare -A colores
@@ -67,6 +68,7 @@ cat <<EOL > "$nombre_archivo"
     <div class="contenido">
         <h1>Información de la IP</h1>
         <p>Tu dirección IP es: $ip_info</p>
+        <img src="$imagen" alt="Imagen" style="max-width: 100%; height: auto;">
     </div>
 </body>
 </html>
